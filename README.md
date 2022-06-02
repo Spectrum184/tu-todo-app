@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tu todo app
 
-## Getting Started
+This project use eslint, prettier for rule conventions so plz follow it, you can add eslint and prettier extensions for VSCode. Project base on Nextjs(the same Reactjs, but have SSR), css base on css module and tailwindcss
 
-First, run the development server:
+## How to run
 
-```bash
-npm run dev
-# or
+Make sure install nodejs npm, yarn before, if you haven't install yarn plz install them first:
+
+```run
+npm install --global yarn
+```
+
+- Go to project directory and run:
+
+```run
+yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Script in project
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- test script
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```run
+yarn run cypress
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- fix format code
 
-## Learn More
+```run
+yarn run lint:fix
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Document
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- <https://nextjs.org/> Nextjs(the same Reactjs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- <https://tailwindcss.com/> Tailwindcss add extension for hinting
 
-## Deploy on Vercel
+- <https://tailwindcomponents.com/> Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- <https://www.cypress.io/> Testing end-to-end, automation test or test component, <https://testing-library.com/> built-in for add test-id for component
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- <https://fontawesome.com/> Svg icon for project
