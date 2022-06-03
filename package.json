@@ -21,11 +21,15 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@next-auth/firebase-adapter": "^0.1.2-pr.183-76202b42.8",
     "axios": "^0.27.2",
     "clsx": "^1.1.1",
+    "firebase": "^9.8.2",
     "next": "12.1.6",
+    "next-auth": "^4.3.4",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-toastify": "^9.0.3"
   },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.2",
