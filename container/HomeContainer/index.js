@@ -11,8 +11,6 @@ const HomeContainer = () => {
     setIsActive(!isActive);
   };
 
-  console.log(isActive);
-
   return (
     <Layout>
       <h1
