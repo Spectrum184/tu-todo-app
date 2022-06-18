@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { getSession } from 'next-auth/react';
 import LoginContainer from '~/container/LoginContainer';
 
 export default function Register() {
@@ -17,4 +18,19 @@ export default function Register() {
       <LoginContainer />
     </div>
   );
+}
+
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+
+  if (session) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
+
+  return { props: {} };
 }

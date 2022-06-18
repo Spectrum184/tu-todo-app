@@ -1,5 +1,6 @@
 import HomeContainer from '../container/HomeContainer';
 import Head from 'next/head';
+import { getSession } from 'next-auth/react';
 
 export default function Home() {
   return (
@@ -12,4 +13,19 @@ export default function Home() {
       <HomeContainer />
     </div>
   );
+}
+
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      },
+    };
+  }
+
+  return { props: {} };
 }
