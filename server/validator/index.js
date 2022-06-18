@@ -1,1 +1,1 @@
-export * as userValidator from './userValidator';
+export { loginSchema, registerSchema } from './userValidator';
