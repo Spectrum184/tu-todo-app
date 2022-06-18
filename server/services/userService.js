@@ -26,6 +26,19 @@ export const userService = {
     }
   },
 
+  getSession: async ({ username, email }) => {
+    try {
+      const user = await UserModel.findOne({
+        username,
+        email,
+      });
+
+      return user;
+    } catch (error) {
+      return Error(error);
+    }
+  },
+
   register: async ({ username, password, email, name, ...res }) => {
     try {
       const { error, value } = registerSchema.validate({
@@ -51,7 +64,7 @@ export const userService = {
 
       if (user) return { error: 'Email đã tồn tại' };
 
-      const newPassword = await bcryptjs.hash(password, 12);
+      const newPassword = await bcryptjs.hash(password, 10);
 
       const newUser = new UserModel({
         username: value.username,

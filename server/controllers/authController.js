@@ -23,6 +23,23 @@ export const authController = {
     }
   },
 
+  session: async ({ session }) => {
+    try {
+      if (session) {
+        const user = await userService.getSession(session.user);
+        if (user) session.user = user;
+      }
+
+      return session;
+    } catch (error) {
+      console.log(error);
+
+      return res.status(401).json({
+        message: errorMessage.NO_USER,
+      });
+    }
+  },
+
   register: async (req, res) => {
     try {
       const { result, error } = await userService.register(req.body);

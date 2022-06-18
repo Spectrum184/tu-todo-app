@@ -28,4 +28,7 @@ export default NextAuth({
     signIn: '/login',
     error: '/login',
   },
+  callbacks: {
+    session: authController.session,
+  },
 });
