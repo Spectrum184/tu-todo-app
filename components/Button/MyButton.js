@@ -1,6 +1,6 @@
+import styles from './Button.module.css';
 import React from 'react';
 import clsx from 'clsx';
-import styles from './Button.module.css';
 
 import { toast } from 'react-toastify';
 
