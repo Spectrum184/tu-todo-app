@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import { toast } from 'react-toastify';
 
-const Button = () => {
+const MyButton = () => {
   const onClick = () => {
     toast.success('ok');
   };
@@ -20,4 +20,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default MyButton;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Layout from '~/components/Layout';
 import styles from './Home.module.css';
+import React, { useState } from 'react';
 import clsx from 'clsx';
+import Layout from '~/components/Layout';
 import Button from '~/components/Button';
 
 const HomeContainer = () => {
@@ -22,7 +22,9 @@ const HomeContainer = () => {
         Hello May Cung
       </h1>
       <Button />
-      <button onClick={onClick}>Click</button>
+      <button className='dark:text-4xl' onClick={onClick}>
+        Click
+      </button>
     </Layout>
   );
 };
