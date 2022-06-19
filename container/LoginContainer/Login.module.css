@@ -5,3 +5,8 @@
 .loginForm {
   @apply flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6;
 }
+
+.backgroundImage {
+  background-image: url('../../public/images/recruit.jpeg');
+  background-size: auto;
+}

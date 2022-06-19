@@ -7,7 +7,7 @@ const LoginContainer = () => {
     <Layout showHeader={false}>
       <div className={`${styles.wrapper} dark:bg-gray-900`}>
         <div className='flex justify-center h-screen'>
-          <div className='hidden bg-cover lg:block lg:w-2/3'>
+          <div className={`hidden lg:block lg:w-2/3 ${styles.backgroundImage}`}>
             <div className='flex items-center h-full px-20 bg-gray-900 bg-opacity-40'>
               <div>
                 <h2 className='text-4xl font-bold text-white'>Brand</h2>
