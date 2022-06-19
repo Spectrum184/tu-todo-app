@@ -3,19 +3,24 @@ import React from 'react';
 import Layout from '~/components/Layout';
 
 const LoginContainer = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
   return (
     <Layout showHeader={false}>
       <div className={`${styles.wrapper} dark:bg-gray-900`}>
         <div className='flex justify-center h-screen'>
-          <div className={`hidden lg:block lg:w-2/3 ${styles.backgroundImage}`}>
+          <div
+            className={`hidden lg:block lg:w-2/3 ${styles.backgroundImage} h-auto`}
+          >
             <div className='flex items-center h-full px-20 bg-gray-900 bg-opacity-40'>
               <div>
-                <h2 className='text-4xl font-bold text-white'>Brand</h2>
+                <h2 className='text-4xl font-bold text-white'>DoIt</h2>
 
                 <p className='max-w-xl mt-3 text-gray-300'>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
-                  autem ipsa, nulla laboriosam dolores, repellendus perferendis
-                  libero suscipit nam temporibus molestiae
+                  This time for do something
                 </p>
               </div>
             </div>
@@ -25,7 +30,7 @@ const LoginContainer = () => {
             <div className='flex-1'>
               <div className='text-center'>
                 <h2 className='text-4xl font-bold text-center text-gray-700 dark:text-white'>
-                  Brand
+                  Sign In
                 </h2>
 
                 <p className='mt-3 text-gray-500 dark:text-gray-300'>
@@ -34,7 +39,7 @@ const LoginContainer = () => {
               </div>
 
               <div className='mt-8'>
-                <form>
+                <form onSubmit={onSubmit}>
                   <div>
                     <label
                       htmlFor='email'
@@ -47,7 +52,8 @@ const LoginContainer = () => {
                       name='email'
                       id='email'
                       placeholder='example@example.com'
-                      className='block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40'
+                      className={`${styles.inputEmail} dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 
+                      dark:border-gray-700 dark:focus:border-blue-400`}
                       autoComplete='username'
                     />
                   </div>
@@ -73,15 +79,14 @@ const LoginContainer = () => {
                       name='password'
                       id='password'
                       placeholder='Your Password'
-                      className='block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40'
+                      className={`${styles.inputPassword} dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 
+                      dark:border-gray-700  dark:focus:border-blue-400`}
                       autoComplete='current-password'
                     />
                   </div>
 
                   <div className='mt-6'>
-                    <button className='w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50'>
-                      Sign in
-                    </button>
+                    <button className={styles.signInButton}>Sign in</button>
                   </div>
                 </form>
 
