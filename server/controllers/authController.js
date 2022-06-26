@@ -6,20 +6,19 @@ export const authController = {
     try {
       const { username, password } = req.body;
 
-      const user = userService.login({ username, password });
+      const user = await userService.login({ username, password });
+      console.log(user, '----user');
 
-      if (!user)
-        return res.status(401).json({
-          message: errorMessage.NO_USER,
-        });
+      if (user instanceof Error)
+        return {
+          error: errorMessage.NO_USER,
+        };
 
       return user;
     } catch (error) {
-      console.log(error);
-
-      return res.status(401).json({
-        message: errorMessage.NO_USER,
-      });
+      return {
+        error: errorMessage.NO_USER,
+      };
     }
   },
 
