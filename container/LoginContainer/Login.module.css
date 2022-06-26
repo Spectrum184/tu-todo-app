@@ -8,5 +8,7 @@
 
 .backgroundImage {
   background-image: url('../../public/images/recruit.jpeg');
-  background-size: auto;
+  background-size: contain; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
 }

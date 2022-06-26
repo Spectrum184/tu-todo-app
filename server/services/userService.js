@@ -7,14 +7,18 @@ import { errorMessage } from '~/lib';
 export const userService = {
   login: async ({ username, password }) => {
     try {
-      const value = loginSchema.validate({
+      const { value } = loginSchema.validate({
         username,
         password,
       });
 
-      const user = await UserModel.findOne({ username: value.username });
+      let user = await UserModel.findOne({ username: value.username });
 
-      if (!user) throw Error(errorMessage.NO_USER);
+      if (!user) {
+        user = await UserModel.findOne({ email: value.username });
+
+        if (!user) throw Error(errorMessage.NO_USER);
+      }
 
       const isMatch = await bcryptjs.compare(password, user.password);
 

@@ -19,7 +19,11 @@ export default NextAuth({
     CredentialsProvider({
       name: 'credentials',
       async authorize(credentials, req) {
-        await authController.authorize(credentials, req);
+        const res = await authController.authorize(credentials, req);
+
+        if (res?.error) throw Error(res.error);
+
+        return res;
       },
     }),
   ],
