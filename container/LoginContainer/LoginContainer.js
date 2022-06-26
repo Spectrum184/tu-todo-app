@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Layout from '~/components/Layout';
 
 const LoginContainer = () => {
@@ -137,12 +138,11 @@ const LoginContainer = () => {
 
                 <p className='mt-6 text-sm text-center text-gray-400'>
                   Don&#x27;t have an account yet?{' '}
-                  <a
-                    href='http://localhost:3000/register'
-                    className='text-blue-500 focus:outline-none focus:underline hover:underline'
-                  >
-                    Register
-                  </a>
+                  <Link href='/register'>
+                    <a className='text-blue-500 focus:outline-none focus:underline hover:underline'>
+                      Register
+                    </a>
+                  </Link>
                   .
                 </p>
               </div>
