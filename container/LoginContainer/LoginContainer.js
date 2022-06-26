@@ -10,7 +10,7 @@ const LoginContainer = () => {
 
   return (
     <Layout showHeader={false}>
-      <div className={`${styles.wrapper} dark:bg-gray-900`}>
+      <div className='bg-white w-full dark:bg-gray-900'>
         <div className='flex justify-center h-screen'>
           <div
             className={`hidden lg:block lg:w-2/3 ${styles.backgroundImage} h-auto`}
@@ -93,10 +93,10 @@ const LoginContainer = () => {
                 <p className='mt-6 text-sm text-center text-gray-400'>
                   Don&#x27;t have an account yet?{' '}
                   <a
-                    href='#'
+                    href='http://localhost:3000/register'
                     className='text-blue-500 focus:outline-none focus:underline hover:underline'
                   >
-                    Sign up
+                    Register
                   </a>
                   .
                 </p>
