@@ -44,16 +44,16 @@ const LoginContainer = () => {
 
   return (
     <Layout showHeader={false}>
-      <div className={`${styles.wrapper} dark:bg-gray-900`}>
+      <div className='bg-white w-full dark:bg-gray-900'>
         <div className='flex justify-center h-screen'>
-          <div className={`hidden lg:block lg:w-2/3 ${styles.backgroundImage}`}>
+          <div
+            className={`hidden lg:block lg:w-2/3 ${styles.backgroundImage} h-auto`}
+          >
             <div className='flex items-center h-full px-20 bg-gray-900 bg-opacity-40'>
               <div>
                 <h2 className='text-4xl font-bold text-white'>Brand</h2>
                 <p className='max-w-xl mt-3 text-gray-300'>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
-                  autem ipsa, nulla laboriosam dolores, repellendus perferendis
-                  libero suscipit nam temporibus molestiae
+                  This time for do something
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ const LoginContainer = () => {
             <div className='flex-1'>
               <div className='text-center'>
                 <h2 className='text-4xl font-bold text-center text-gray-700 dark:text-white'>
-                  Brand
+                  Sign In
                 </h2>
 
                 <p className='mt-3 text-gray-500 dark:text-gray-300'>
@@ -114,7 +114,8 @@ const LoginContainer = () => {
                       name='password'
                       id='password'
                       placeholder='Your Password'
-                      className='block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40'
+                      className={`${styles.inputPassword} dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 
+                      dark:border-gray-700  dark:focus:border-blue-400`}
                       autoComplete='current-password'
                     />
                     {error && (
@@ -137,10 +138,10 @@ const LoginContainer = () => {
                 <p className='mt-6 text-sm text-center text-gray-400'>
                   Don&#x27;t have an account yet?{' '}
                   <a
-                    href='#'
+                    href='http://localhost:3000/register'
                     className='text-blue-500 focus:outline-none focus:underline hover:underline'
                   >
-                    Sign up
+                    Register
                   </a>
                   .
                 </p>

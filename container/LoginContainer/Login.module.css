@@ -1,14 +1,27 @@
-.wrapper {
-  @apply bg-white w-full;
-}
-
 .loginForm {
   @apply flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6;
 }
 
 .backgroundImage {
-  background-image: url('../../public/images/recruit.jpeg');
-  background-size: contain; /* <------ */
+  background-image: url('../../public/images/koi-fish-at-moonlight_3840x2160_xtrafondos.com.jpg');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center center;
+}
+
+.inputEmail {
+  @apply block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 
+  bg-white border border-gray-200 rounded-md  
+  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40;
+}
+
+.inputPassword {
+  @apply block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border
+  border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-400 
+  focus:outline-none focus:ring focus:ring-opacity-40;
+}
+
+.signInButton {
+  @apply w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform 
+  bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring 
+  focus:ring-blue-300 focus:ring-opacity-50;
 }
